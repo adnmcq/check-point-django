@@ -9,7 +9,12 @@
         <title>Check Point</title>
         <link rel="icon" type="image/x-icon" href="{% static '/dist/assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+
+<!--        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>-->
+<script src="https://kit.fontawesome.com/ae875ee84f.js" crossorigin="anonymous"></script>
+
+<!--         <script src="https://use.fontawesome.com/releases/v4.5.0/js/all.js" crossorigin="anonymous"></script>-->
+
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
@@ -57,7 +62,7 @@
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                            <i class="fab fa-bluetooth fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Bluetooth Low Energy</h4>
                         <p class="text-muted">We will leverage improvements in <a href="https://en.wikipedia.org/wiki/Bluetooth_Low_Energy">this technology</a> to solve still unresolved problem of freight visibility.</p>
@@ -65,7 +70,7 @@
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-cloud fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Cloud Based Tracking</h4>
                         <p class="text-muted">Scanners are connected to the web, and report location of beacons to the cloud.
@@ -74,7 +79,7 @@
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Follow in Browser</h4>
                         <p class="text-muted">Our <a href="https://akgeo.herokuapp.com/">browser-based portal</a> allows you to select loads to follow and view their progress on maps and in tabular format.</p>
@@ -182,49 +187,52 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Plan</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">Implementation of freight-tracking technology.</h3>
                 </div>
                 <ul class="timeline">
                     <li>
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static '/dist/assets/img/about/1.jpg' %}" alt="" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>2009-2011</h4>
-                                <h4 class="subheading">Our Humble Beginnings</h4>
+                                <h4>Late 2020</h4>
+                                <h4 class="subheading">Initial Work/ POC</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                            <div class="timeline-body"><p class="text-muted">Early POCs show that Bluetooth LE devices are able to communicate at distance of ~ 200 feet.
+                            A <a href="https://akgeo.herokuapp.com/">browser-based portal</a> is built with django/ heroku and location of beacon is mapped using <a href=https://www.mapbox.com/">mapbox.js</a></p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static '/dist/assets/img/about/2.jpg' %}" alt="" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>March 2011</h4>
-                                <h4 class="subheading">An Agency is Born</h4>
+                                <h4>Currently</h4>
+                                <h4 class="subheading">Start Up</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                            <div class="timeline-body"><p class="text-muted">Reaching out to potential partners for testing technology (ie. <a href = "https://www.vtti.vt.edu/facilities/virginia-smart-roads.html">Virginia Tech Smart Road</a>), hosting scanning devices (cell tower companies)
+                            and acquiring grant money for scaling up.</p></div>
                         </div>
                     </li>
                     <li>
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static '/dist/assets/img/about/3.jpg' %}" alt="" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>December 2012</h4>
-                                <h4 class="subheading">Transition to Full Service</h4>
+                                <h4>2021+</h4>
+                                <h4 class="subheading">Scaling Up</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                            <div class="timeline-body"><p class="text-muted">With initial startup capital raised and concept proven at operating speeds/ distances, we will build network of scanners and attract clients
+                            to build a steady revenue stream.</p></div>
                         </div>
                     </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static '/dist/assets/img/about/4.jpg' %}" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>July 2014</h4>
-                                <h4 class="subheading">Phase Two Expansion</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
+<!--                    <li class="timeline-inverted">-->
+<!--                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static '/dist/assets/img/about/4.jpg' %}" alt="" /></div>-->
+<!--                        <div class="timeline-panel">-->
+<!--                            <div class="timeline-heading">-->
+<!--                                <h4>July 2014</h4>-->
+<!--                                <h4 class="subheading">Phase Two Expansion</h4>-->
+<!--                            </div>-->
+<!--                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>-->
+<!--                        </div>-->
+<!--                    </li>-->
                     <li class="timeline-inverted">
                         <div class="timeline-image">
                             <h4>
@@ -252,9 +260,9 @@
                             <img class="mx-auto rounded-circle" src="{% static '/dist/assets/img/team/1.jpg' %}" alt="" />
                             <h4>Keith Salette</h4>
                             <p class="text-muted">Founder</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+<!--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>-->
+<!--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>-->
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/keithsalettejr/"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -262,9 +270,9 @@
                             <img class="mx-auto rounded-circle" src="{% static '/dist/assets/img/team/2.jpg' %}" alt="" />
                             <h4>Aiden McHugh</h4>
                             <p class="text-muted">Developer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+<!--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>-->
+<!--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>-->
+                            <a class="btn btn-dark btn-social mx-2" href="https://github.com/adnmcq"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
 <!--                    <div class="col-lg-4">-->
