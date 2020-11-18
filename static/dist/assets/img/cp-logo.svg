@@ -1,0 +1,16 @@
+<svg width="800" height="320" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="322" width="802" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect opacity="0.6" stroke="#000" id="svg_6" height="300" width="400" y="0.75" x="0.75" stroke-opacity="null" stroke-width="0" fill="#8cd79f"/>
+  <rect opacity="0.6" stroke="#000" id="svg_8" height="300" width="400" y="0.75" x="399.25" stroke-opacity="null" stroke-width="0" fill="#FFFA8D"/>
+  <rect opacity="0.6" stroke="#000" id="svg_10" height="300" width="400" y="185.25" x="0.75" stroke-opacity="null" stroke-width="0" fill="#FFA9A2"/>
+  <rect opacity="0.6" stroke="#000" id="svg_9" height="300" width="400" y="185.25" x="400" stroke-opacity="null" stroke-width="0" fill="#9ACEE6"/>
+  <text opacity="0.9" font-style="italic" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Oswald, sans-serif" font-size="116" id="svg_1" y="200" x="-10.64844" stroke-width="0" stroke="#000" fill="#000000">CHECK POINT</text>
+ </g>
+</svg>
