@@ -30,6 +30,7 @@ DEBUG = True
 # Application definition
 
 INSTALLED_APPS = [
+'content.apps.ContentConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'check_point_django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,17 +122,41 @@ ALLOWED_HOSTS = ['*']
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/3.0/howto/static-files/
+'''
+1. Make sure that django.contrib.staticfiles is included in your INSTALLED_APPS.
 
-# Extra places for collectstatic to find static files.
+2. In your settings file, define STATIC_URL, for example:
+'''
+STATIC_URL = '/static/'
+'''
+3. In your templates, use the static template tag to build the URL for the given relative path using the configured STATICFILES_STORAGE.
+ex:
+{% load static %}
+<img src="{% static "my_app/example.jpg" %}" alt="My image">
+
+
+4. Store your static files in a folder called static in your app. For example my_app/static/my_app/example.jpg.
+(you can store them not in app as well, see next step..)
+
+5. Your project will probably also have static assets that aren’t tied to a particular app. In addition to using a 
+static/ directory inside your apps, you can define a list of directories (STATICFILES_DIRS) 
+in your settings file where Django will also look for static files. For example:
+'''
+
 STATICFILES_DIRS = [
-    os.path.join(PROJECT_ROOT, 'static'),
+    os.path.join(BASE_DIR, "static")
 ]
 
-# Simplified static file serving.
-# https://warehouse.python.org/project/whitenoise/
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+MEDIA_ROOT  = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
+LOGIN_REDIRECT_URL  = '/'
+
+#https://devcenter.heroku.com/articles/deploying-python
+#https://github.com/heroku/django-heroku
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals(), logging=False)
