@@ -20,7 +20,7 @@ def index(request):
 
         from django.core.mail import send_mail
 
-        a=send_mail('Mail Subject', 'Mail content', settings.EMAIL_HOST_USER, ['to@example.com'], fail_silently=False)
+        a=send_mail('Mail Subject', 'Mail content', settings.EMAIL_HOST_USER, ['to@example.com'], fail_silently=True)
 
         print("Email Sent")
     context = { 'a': 0}
