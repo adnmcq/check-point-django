@@ -13,9 +13,23 @@ import os
 import dj_database_url
 import django_heroku
 
+
+
+import configparser
+
+
+
+
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+
+config = configparser.ConfigParser()
+config.read(os.path.join(BASE_DIR,'conf.ini'))
+GMAIL_PASS = config['GMAIL']['pass'] if not os.environ.get('GMAIL_PASS') else os.environ.get('GMAIL_PASS')
 
 
 # Quick-start development settings - unsuitable for production
@@ -160,3 +174,19 @@ LOGIN_REDIRECT_URL  = '/'
 # Configure Django App for Heroku.
 import django_heroku
 django_heroku.settings(locals(), logging=False)
+
+
+
+EMAIL_USE_TLS = True
+
+EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_PORT = 587
+
+EMAIL_HOST_USER = 'aiden3189@gmail.com'
+
+EMAIL_HOST_PASSWORD = GMAIL_PASS
+
+DEFAULT_FROM_EMAIL = 'aiden3189@gmail.com'
+
+DEFAULT_TO_EMAIL = 'aiden3189@gmail.com'
