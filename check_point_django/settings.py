@@ -176,17 +176,10 @@ import django_heroku
 django_heroku.settings(locals(), logging=False)
 
 
-
-EMAIL_USE_TLS = True
-
-EMAIL_HOST = 'smtp.gmail.com'
-
-EMAIL_PORT = 587
-
-EMAIL_HOST_USER = 'aiden3189@gmail.com'
-
+#https://stackoverflow.com/questions/38131738/how-to-send-emails-through-django-using-a-private-domain-email-address
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_SSL = True
+EMAIL_HOST = 'mail.check-point.us'
+EMAIL_HOST_USER = 'info@check-point.us'
 EMAIL_HOST_PASSWORD = GMAIL_PASS
-
-DEFAULT_FROM_EMAIL = 'aiden3189@gmail.com'
-
-DEFAULT_TO_EMAIL = 'aiden3189@gmail.com'
+EMAIL_PORT = 465
