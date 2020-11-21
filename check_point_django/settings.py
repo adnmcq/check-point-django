@@ -176,10 +176,13 @@ import django_heroku
 django_heroku.settings(locals(), logging=False)
 
 
-#https://stackoverflow.com/questions/38131738/how-to-send-emails-through-django-using-a-private-domain-email-address
+#Finally got to work using https://app.mailjet.com/   - they provide correct TXT record for namecheap>domains>advanced DNS
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_SSL = True
-EMAIL_HOST = 'mail.check-point.us'
-EMAIL_HOST_USER = 'info@check-point.us'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'in-v3.mailjet.com'
+EMAIL_HOST_USER = '12aa6c8649641420727cdf77abda28fb'
 EMAIL_HOST_PASSWORD = GMAIL_PASS
-EMAIL_PORT = 465
+EMAIL_PORT = 587
+
+
+

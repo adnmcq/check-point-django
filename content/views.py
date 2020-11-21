@@ -16,14 +16,16 @@ def index(request):
         from django.core.mail import send_mail
 
         print("Sending Email"
-        )
-
+              )
 
         from django.core.mail import send_mail
 
-        a=send_mail('Mail Subject', 'Mail content', settings.EMAIL_HOST_USER, ['to@info@check-point.us'], fail_silently=True)
+        a = send_mail('Subject', 'Prod Message.', 'info@check-point.us', ['aiden3189@gmail.com', 'ksalette88@gmail.com'], )
 
-        print("Email Sent")
+        print("Email Sent", a)
+
+
+
     context = { 'a': 0}
     return render(request, 'content/index.html', context)
 
@@ -33,9 +35,6 @@ def index(request):
 def send_email(request):
 
     #https://support.google.com/accounts/answer/6010255
-    from django.conf import settings
-
-    from django.core.mail import send_mail
 
     print("Sending Email"
     )
@@ -43,7 +42,7 @@ def send_email(request):
 
     from django.core.mail import send_mail
 
-    a=send_mail('Mail Subject', 'Mail content', settings.EMAIL_HOST_USER, ['info@check-point.us', 'aiden3189@gmail.com'], fail_silently=False)
+    a=send_mail('Subject', 'Message.', 'info@check-point.us', ['aiden3189@gmail.com', 'ksalette88@gmail.com'],)
 
     print("Email Sent", a)
 
