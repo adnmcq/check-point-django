@@ -12,4 +12,6 @@ path('contact', views.contact, name='contact'),
 
 
 path('send_email', views.send_email, name='send_email'),
+#success_view
+path('success_view', views.success_view, name='success_view'),
 ]
