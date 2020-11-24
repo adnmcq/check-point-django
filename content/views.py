@@ -35,12 +35,14 @@ def index(request):
 
                 from django.core.mail import send_mail
 
-                #message to us saying their inquiry
-                a = send_mail(subject, message_plus_phone, 'info@check-point.us',
-                              ['aiden3189@gmail.com', 'ksalette88@gmail.com'], fail_silently=True)
 
-                b = send_mail(subject, 'Thank you for reaching out, we will respond to your message as soon as we can.', 'info@check-point.us',
-                              [from_email], fail_silently=True )
+                if message_plus_phone:
+                    #message to us saying their inquiry
+                    a = send_mail(subject, message_plus_phone, 'info@check-point.us',
+                                  ['aiden3189@gmail.com', 'ksalette88@gmail.com'], fail_silently=True)
+
+                    b = send_mail(subject, 'Thank you for reaching out, we will respond to your message as soon as we can.', 'info@check-point.us',
+                                  [from_email], fail_silently=True )
 
                 print("Email Sent", a, b)
             except BadHeaderError:
